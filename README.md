@@ -1,6 +1,8 @@
 # Regex-Tutorial
 
-Introductory paragraph (replace this with your text)
+What is Regex or regular expressions?
+
+Regular expressions are specially formatted text strings to find patterns in text. Commonly used for text processing and manipulation and validation of input. Regex is formed by a sequence of characters to create a search pattern, which can be applied to text search, validation of input and text replace operations.
 
 ## Summary
 
