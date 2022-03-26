@@ -40,10 +40,24 @@ Quantifiers as what the terms suggested will be you requirement for the number o
 Quantifiers can choose wilcards to specify the number of characters.
 
 -   '*' -- is a univeral wildcard that accepts any character and any number of inputs. A zero input is acceptable the the asterisk. '*' wildcard.
-        -     *com basically matches basic.com, abbasiccom, abscom, acom or com but does not match bacis.cmm.
+        -   *com basically matches basic.com, abbasiccom, abscom, acom or com but does not match bacis.cmm.
 -   '+'  -- is a wildcard that validates or matches a patter for one or more times.
-        -     +com as with *com will match 'basiccom', 'abbasiccom', 'abscom' but rejects 'com', as as least 1 character must be there before the .com string.
--   '?' -- is a wildcard that will accept a pattern for 
+        -   +com as with *com will match 'basiccom', 'abbasiccom', 'abscom' but rejects 'com', as as least 1 character must be there before the .com string.
+-   '?' -- is a wildcard that will accept a pattern for one or no character.
+        -   ?com will match 'com' and 'acom', 'bcom', 'ccom' or '5com'.  It rejects 4acom due to the extra character '4'.
+-   '.' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
+        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluaated or match by the \. only.  The is why in our regex, /^([a-z0-9_\.-]+)@([\da-z\.-]+)**\.**([a-z\.]{2,6})$/ we have a \. notation in between 
+
+Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
+
+-   {i} - sets the match to be an exact number of times.
+        -   {4} means that it will only match if there are 4 characters in the input or string.
+-   {i, }   - setting the minimum number of characters as a match.
+        -   {8} means that it will only match if the input has at least 8 characters.
+-   {i, n}  - the pattern must be a minimum character as i and a maximum of n characters.
+        -   {4, 7} means that a match will only happen when the evaluated string will have at least 4 characters and a maximum of seven characters.  Anything beyond the scope will not result to a match.
+    
+In our email regex, we have the {2,6} quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters 
 
 ### Grouping Constructs
 
