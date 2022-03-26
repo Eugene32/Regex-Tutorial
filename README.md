@@ -46,7 +46,7 @@ Quantifiers can choose wilcards to specify the number of characters.
 -   ' ? ' -- is a wildcard that will accept a pattern for one or no character.
         -   ?com will match 'com' and 'acom', 'bcom', 'ccom' or '5com'.  It rejects 4acom due to the extra character '4'.
 -   ' . ' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
-        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluated or match by the \\. only.  The is why in our email regex we have a \\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.  This is where we have the period in a fake@fakemail **.** com is.
+        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluated or match by the \\. only.  The is why in our email regex we have a \\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.  This is where we have the period in a fake@fakemail **.** com.
 
 Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
 
@@ -57,9 +57,11 @@ Using the curly brackets as a quantifier provides a better way of limit or dicta
 -   { i, n }  - the pattern must be a minimum character as i and a maximum of n characters.
         -   { 4 , 7 } means that a match will only happen when the evaluated string will have at least 4 characters and a maximum of seven characters.  Anything beyond the scope will not result to a match.
     
-In our email regex, we have the { 2 , 6 } quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters. This will cater for emails that ends with a .au, .net, .com and .museum.
+In our email regex, we have the { 2 , 6 } quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters. This will cater for the email's domain that ends with a .au, .net, .com and .museum.
 
 ### Grouping Constructs
+
+Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open an dclose parenthesis, ().
 
 ### Bracket Expressions
 
