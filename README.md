@@ -71,6 +71,10 @@ The email regex has three groups which represents the part of the email namely: 
 
 ### Bracket Expressions
 
+Is a part of the regex represented by square brackets ([ ]).  The bracket translate as to look for a match regardless of length and location contained in it. 
+
+Our email regex has `[a-z0-9_\.-]' dissecting the expresion we will match:
+- [ a-z ]  --> string can contain all lowercase characters between a to z.  No capital letter allowed.  It is a protocol to convert all email inputs to lowercase via js thus there is no need to include A-Z
 
 
 ### Character Classes
