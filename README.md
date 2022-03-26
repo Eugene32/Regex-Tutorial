@@ -59,15 +59,19 @@ Using the curly brackets as a quantifier provides a better way of limit or dicta
     
 In our email regex, we have the { 2 , 6 } quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters. This will cater for the email's domain that ends with a '.au', '.net', '.com' or '.museum'.
 
+
 ### Grouping Constructs
 
 Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open and close parenthesis, ( ).
 
           /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
           
-The email regex has three groups which represents the part of the email namely: username, `([a-z0-9_\.-]+)`, email server `([\da-z\.-]+)` and the domain, `([a-z\.]{2,6})`.  For an email address of fake@fakemail.com, the user name is fake, fakemail is the server and the domain is .com.
+The email regex has three groups which represents the part of the email namely: username, `([a-z0-9_\.-]+)`, email server `([\da-z\.-]+)` and the domain, `([a-z\.]{2,6})`.  For an email address of fake@fakemail.com, the user name is 'fake', 'fakemail' is the server and the domain is '.com'.
+
 
 ### Bracket Expressions
+
+
 
 ### Character Classes
 
