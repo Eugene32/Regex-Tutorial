@@ -86,11 +86,24 @@ Our email regex has `[a-z0-9_\.-\d]' dissecting the expresion means we will vali
 
 ### Character Classes
 
+Character classes, also known as "character set" enable special notation that matches a certain set of characters.  That instead of typing all the characters that are acceptable for a match, the character class enables shorter code.
+
+Here are common character classes:
+
+- `.`  --> Matches any character besides `\n` or new line.
+- `\d` --> Matches numeric digit and is equivalent to [ 0-9 ] notation.
+- `\w` --> Matches alphanumeric characters cover uppercase and lowercase alphabets.  Thiis equivalent to [ a-zA-z0-9 ].
+- `\s' --> Matches a single space character, including tabs and line breaks.
+
+Value can be put in 'inverse' by changing the notation to uppercase.  '\W' will only match special characters instead of alphanumerics.
+
 ### The OR Operator
 
 ### Flags
 
 ### Character Escapes
+
+Character escape uses a backslash ( \ ) to denote that special characters quantifiers such as + should be taken literally when it is expressed as ( \+ ).  In a regex of `[a-z\+]` it means that the plus sign is part of the acceptable character for the match.  It is different to the regex of `29+` where ` + ` acts as quantifier.
 
 ## Author
 
