@@ -25,8 +25,21 @@ To validate then input we will have the regex as shown below:
 ## Regex Components
 
 ### Anchors
+Anchors are part of the regex that do not match any character that we intend to search or validate.  They are considered as indicator for a start and end and is represented by the ^ and $.
+
+The ^ anchor indicates to match a string after the anchor.  This means applying ^r will match 'r' for a string of 'reg'.  ^reg will match 're' of the string 'reg' and that ^reg will match 'reg' of the whole string of 'reg'.
+
+The $ anchor serves as a terminator or end of the regex search or validation.  This means x$ macthes 'x' for a string/input of 'ex'. In turn, e$ does not match for the same string but ex$ will match the whole string of 'ex'.
+
+Therefore in our regex to validate that the input maches an email, we start of with a ^ as we want to test for characters after it.  We then have the $ at the end to indicate the 'end' of the expression.  
 
 ### Quantifiers
+
+Quantifiers as what the terms suggested will be you requirement for the number of characters.  A quantifier or quantifiers may indicate a requirement for the minimum number of characters, exact number of characters to be matched and a specific minimum to maximum number of characters to be matched.
+
+Quantifiers can choose wilcards to specify the number of characters.
+
+- * - is a univeral wildcard that accepts any character and any number of inputs.
 
 ### Grouping Constructs
 
