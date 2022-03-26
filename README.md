@@ -7,8 +7,7 @@ Regular expressions are specially formatted text strings to find patterns in tex
 ## Summary
 
 This tutorial will tackle and explain how to make a regex to validate an input to be an email.
-To validate then input we will have the regex as shown below:
-   -   /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+To validate then input we will have the regex as shown below:             /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Table of Contents
 
