@@ -61,7 +61,11 @@ In our email regex, we have the { 2 , 6 } quantifier that sets the condition of 
 
 ### Grouping Constructs
 
-Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open an dclose parenthesis, ().
+Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open and close parenthesis, ( ).
+
+          /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+          
+The email regex has three groups which represents the part of the email namely: username, `([a-z0-9_\.-]+)`, email server `([\da-z\.-]+)` and the domain, `([a-z\.]{2,6})`.  For an email address of fake@fakemail.com, the user name is fake, fakemail is the server and the domain is .com.
 
 ### Bracket Expressions
 
