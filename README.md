@@ -39,16 +39,14 @@ Quantifiers as what the terms suggested will be you requirement for the number o
 
 Quantifiers can choose wilcards to specify the number of characters.
 
--   ' * ' -- is a univeral wildcard that accepts any character and any number of inputs. A zero input is acceptable the the asterisk. '*' wildcard.
-        -   *com basically matches basic.com, abbasiccom, abscom, acom or com but does not match bacis.cmm.
+-   ' * ' -- is a univeral wildcard that matches zero or more occurence.
+        -   A regex of 29* will completely match an input of ' 2 ' as well as ' 299 '
 -   ' + '  -- is a wildcard that validates or matches a patter for one or more times.
-        -   +com as with *com will match 'basiccom', 'abbasiccom', 'abscom' but rejects 'com', as as least 1 character must be there before the .com string.
+        -   A regex of 29+ will completely NOT match an input of ' 2 ' but will match ' 29 ' and ' 299 '
 -   ' ? ' -- is a wildcard that will accept a pattern for one or no character.
-        -   ?com will match 'com' and 'acom', 'bcom', 'ccom' or '5com'.  It rejects 4acom due to the extra character '4'.
--   ' . ' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
-        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluated or match by the \\. only.  The is why in our email regex we have a \\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.  This is where we have the period in a fake@fakemail **.** com.
+        -   A regex of 29? willmatch an input of ' 2 ' and ' 29 ' but will NOT match ' 299 ' 
 
-Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
+Using the curly brackets, { } as a limiter provides a better way of limit or dictating the match requirement.
 
 -   { i } - sets the match to be an exact number of times.
         -   { 4 } means that it will only match if there are 4 characters in the input or string.
@@ -73,10 +71,12 @@ The email regex has three groups which represents the part of the email namely: 
 
 Is a part of the regex represented by square brackets ([ ]).  The bracket translate as to look for a match regardless of length and location contained in it. 
 
-Our email regex has `[a-z0-9_\.-]' dissecting the expresion we will match:
-- `[ a-z ]`  --> The string can contain all lowercase characters between a to z. Uppercase characters will not be considered as a match.  However, this not a problem as it is a protocol to convert all email address inputs to lowercase via js thus there is no need to include A-Z requirement.
+Our email regex has `[a-z0-9_\.-\d]' dissecting the expresion means we will validate for:
+- `[ a-z ]`  --> The string can contain all lowercase characters between a to z. Uppercase characters will not be considered as a match.  However, this not a problem as it is a protocol to convert all email address inputs to lowercase,thus there is no need to include A-Z requirement.
 - `[ 0-9 ]` --> The string can contain numerical value from 0 - 9.
-- `[ _\.-]` --> The string
+- `[ _\.-]` --> The string can include an underscore, ( _ ) , a period ( . ) and a hyphen ( - ).
+
+
 
 
 ### Character Classes
