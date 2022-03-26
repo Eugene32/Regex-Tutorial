@@ -99,6 +99,8 @@ Value can be put in 'inverse' by changing the notation to uppercase.  '\W' will 
 
 ### The OR Operator
 
+The OR operator, is also known as alternative operator expressed as ( | ).  As the suggested the `\` operator just mean an alterative option.  For example, `y(e|a)rn` would match 'yern' and 'yarn' but not 'yearn'.
+
 ### Flags
 
 Are optional parameters that alter the behaviour of the regex search
