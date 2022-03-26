@@ -122,7 +122,7 @@ Character escape uses a backslash ( \ ) to denote that special characters such a
 Now to decode our regex, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.
 
 - `/^` --> Serves as the start of the regex literal
-- `([a-z0-9_\.-]+)`  --> The first group. Indicates that this is a group to be evaluated where an alphanumeric `a-z0-9` input is considered a match and that and underscore, `_`, a period, `.` and a hyphen, `-` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's username.
+- `([a-z0-9_\.-]+)`  --> The first group. Indicates that this is a group to be evaluated where an alphanumeric `[ a-z0-9 ]` input is considered a match and that and underscore, `[ _ ]`, a period, `[ . ]` and a hyphen, `[ - ]` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's username.
 - `@` --> Indicates that the input must have an At sign between the first and the 2nd group.
 - `([\da-z\.-]+)` --> The second group.  Indicates that this group can contain numerical digits, `\d`, letters in lower case, 'a-z', a period, `.` and a hyphen, `-` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's server name.
 - `\.` --> Indicates that the input must have a period in between the second and third grouping.
