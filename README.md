@@ -35,11 +35,15 @@ Therefore in our regex to validate that the input maches an email, we start of w
 
 ### Quantifiers
 
-Quantifiers as what the terms suggested will be you requirement for the number of characters.  A quantifier or quantifiers may indicate a requirement for the minimum number of characters, exact number of characters to be matched and a specific minimum to maximum number of characters to be matched.
+Quantifiers as what the terms suggested will be you requirement for the number of characters.  A quantifier or quantifiers may indicate a requirement for the minimum number of characters, exact number of characters to be matched and a specific minimum to maximum number of characters to be matched. The curly bracets {} serves as a container for the quantifiers
 
 Quantifiers can choose wilcards to specify the number of characters.
 
--   '*' -- is a univeral wildcard that accepts any character and any number of inputs.
+-   '*' -- is a univeral wildcard that accepts any character and any number of inputs. A zero input is acceptable the the asterisk. '*' wildcard.
+        -     *com basically matches basic.com, abbasiccom, abscom, acom or com but does not match bacis.cmm.
+-   '+'  -- is a wildcard that validates or matches a patter for one or more times.
+        -     +com as with *com will match 'basiccom', 'abbasiccom', 'abscom' but rejects 'com', as as least 1 character must be there before the .com string.
+-   '?' -- is a wildcard that will accept a pattern for 
 
 ### Grouping Constructs
 
