@@ -28,7 +28,7 @@ To validate then input we will have the regex as shown below:
 ### Anchors
 Anchors are part of the regex that do not match any character that we intend to search or validate.  They are considered as indicator for a start and end and is represented by the ^ and $.
 
-The ^ anchor indicates to match a string after the anchor.  This means applying ^r will match 'r' for a string of 'reg'.  ^reg will match 're' of the string 'reg' and that ^reg will match 'reg' of the whole string of 'reg'.
+The ^ anchor indicates to match a string after the anchor.  This means applying ^r will match 'r' for a string of 'reg'.  ^reg will match 're' of the string 'reg' and that ^reg will match 'reg' of the whole string of 'reg'. The ^ anchor negates the search criteria inside the square brackets.
 
 The $ anchor serves as a terminator or end of the regex search or validation.  This means x$ macthes 'x' for a string/input of 'ex'. In turn, e$ does not match for the same string but ex$ will match the whole string of 'ex'.
 
@@ -80,7 +80,9 @@ Is a part of the regex represented by square brackets ([ ]).  The bracket transl
 Our email regex has `[a-z0-9_\.-\d]' dissecting the expresion means we will validate for:
 - `[ a-z ]`  --> The string can contain all lowercase characters between a to z. Uppercase characters will not be considered as a match.  However, this not a problem as it is a protocol to convert all email address inputs to lowercase,thus there is no need to include A-Z requirement.
 - `[ 0-9 ]` --> The string can contain numerical value from 0 - 9.
-- `[ _\.-]` --> The string can include an underscore, ( _ ) , a period ( . ) and a hyphen ( - ).
+- `[ _\.- ]` --> The string can include an underscore, ( _ ) , a period ( . ) and a hyphen ( - ).
+- `[ ^ ] --> The '^' character will make the next set of characters to be excluded instead of being included as a criteria to match the search/test.
+  - `[ ^drn ]an` will match 'can', 'man' or 'fan' but will NOT match 'dan', 'pan' and 'ran'.
 
 ### Character Classes
 
@@ -117,7 +119,9 @@ Character escape uses a backslash ( \ ) to denote that special characters such a
 
 ### Decoding the Email Regex
 
+Now to decode our regex, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.
 
+- /^
 
 ## Author
 
