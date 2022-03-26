@@ -39,7 +39,7 @@ Quantifiers as what the terms suggested will be you requirement for the number o
 
 Quantifiers can choose wilcards to specify the number of characters.
 
-- '*' - is a univeral wildcard that accepts any character and any number of inputs.
+- '*' -- is a univeral wildcard that accepts any character and any number of inputs.
 
 ### Grouping Constructs
 
