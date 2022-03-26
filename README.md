@@ -131,4 +131,6 @@ Now to decode our regex, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+The Reynan Kanindot is a computer engineerg and a junior web developer who has passion for coding.
+https://github.com/Eugene32
+
