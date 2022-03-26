@@ -41,8 +41,10 @@ Quantifiers can choose wilcards to specify the number of characters.
 
 -   ' * ' -- is a univeral wildcard that matches zero or more occurence.
         -   A regex of 29* will completely match an input of ' 2 ' as well as ' 299 '
+  
 -   ' + '  -- is a wildcard that validates or matches a patter for one or more times.
         -   A regex of 29+ will completely NOT match an input of ' 2 ' but will match ' 29 ' and ' 299 '
+     
 -   ' ? ' -- is a wildcard that will accept a pattern for one or no character.
         -   A regex of 29? willmatch an input of ' 2 ' and ' 29 ' but will NOT match ' 299 ' 
 
