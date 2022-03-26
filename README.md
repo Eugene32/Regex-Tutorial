@@ -50,14 +50,14 @@ Quantifiers can choose wilcards to specify the number of characters.
 
 Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
 
--   {i} - sets the match to be an exact number of times.
+-   { i } - sets the match to be an exact number of times.
         -   {4} means that it will only match if there are 4 characters in the input or string.
--   {i, }   - setting the minimum number of characters as a match.
+-   { i, }   - setting the minimum number of characters as a match.
         -   {8} means that it will only match if the input has at least 8 characters.
--   {i, n}  - the pattern must be a minimum character as i and a maximum of n characters.
-        -   {4, 7} means that a match will only happen when the evaluated string will have at least 4 characters and a maximum of seven characters.  Anything beyond the scope will not result to a match.
+-   { i, n }  - the pattern must be a minimum character as i and a maximum of n characters.
+        -   { 4 , 7 } means that a match will only happen when the evaluated string will have at least 4 characters and a maximum of seven characters.  Anything beyond the scope will not result to a match.
     
-In our email regex, we have the {2,6} quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters 
+In our email regex, we have the { 2 , 6 } quantifier that sets the condition of the match to be a minimum of 2 characters to a maximum of 6 characters 
 
 ### Grouping Constructs
 
