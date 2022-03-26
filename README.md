@@ -35,7 +35,7 @@ Therefore in our regex to validate that the input maches an email, we start of w
 
 ### Quantifiers
 
-Quantifiers as what the terms suggested will be you requirement for the number of characters.  A quantifier or quantifiers may indicate a requirement for the minimum number of characters, exact number of characters to be matched and a specific minimum to maximum number of characters to be matched. The curly bracets {} serves as a container for the quantifiers
+Quantifiers as what the terms suggested will be you requirement for the number of characters.  A quantifier or quantifiers may indicate a requirement for the minimum number of characters, exact number of characters to be matched and a specific minimum to maximum number of characters to be matched. The curly bracets { } serves as a container for the quantifiers
 
 Quantifiers can choose wilcards to specify the number of characters.
 
@@ -46,7 +46,7 @@ Quantifiers can choose wilcards to specify the number of characters.
 -   '?' -- is a wildcard that will accept a pattern for one or no character.
         -   ?com will match 'com' and 'acom', 'bcom', 'ccom' or '5com'.  It rejects 4acom due to the extra character '4'.
 -   '.' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
-        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluaated or match by the \\\\\. only.  The is why in our email regex we have a &\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.
+        -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluaated or match by the {\\\\\.} only.  The is why in our email regex we have a &\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.
 
 Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
 
