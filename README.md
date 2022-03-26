@@ -21,6 +21,7 @@ To validate then input we will have the regex as shown below:
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
+- [Decoding the Email Regex](#decoding-the-email-regex)
 
 ## Regex Components
 
@@ -81,9 +82,6 @@ Our email regex has `[a-z0-9_\.-\d]' dissecting the expresion means we will vali
 - `[ 0-9 ]` --> The string can contain numerical value from 0 - 9.
 - `[ _\.-]` --> The string can include an underscore, ( _ ) , a period ( . ) and a hyphen ( - ).
 
-
-
-
 ### Character Classes
 
 Character classes, also known as "character set" enable special notation that matches a certain set of characters.  That instead of typing all the characters that are acceptable for a match, the character class enables shorter code.
@@ -99,7 +97,7 @@ Value can be put in 'inverse' by changing the notation to uppercase.  '\W' will 
 
 ### The OR Operator
 
-The OR operator, is also known as alternative operator expressed as ( | ).  As the suggested the `\` operator just mean an alterative option.  For example, `y(e|a)rn` would match 'yern' and 'yarn' but not 'yearn'.
+The OR operator, is also known as alternative operator expressed as ( | ).  As suggested, the `|` operator just means an alterative option.  For example, `y(e|a)rn` would match 'yern' and 'yarn' but not 'yearn'.
 
 ### Flags
 
@@ -115,6 +113,11 @@ Are optional parameters that alter the behaviour of the regex search
 ### Character Escapes
 
 Character escape uses a backslash ( \ ) to denote that special characters such as quantifiers to be taken literally when it is expressed as ( \+ ).  In a regex of `[a-z\+]` it means that the plus sign is part of the acceptable character for the match.  It is different to the regex of `29+` where ` + ` acts as quantifier.
+
+
+### Decoding the Email Regex
+
+
 
 ## Author
 
