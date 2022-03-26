@@ -132,5 +132,5 @@ Now to decode our regex, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.
 ## Author
 
 The Reynan Kanindot is a computer engineer and a junior web developer who has passion for coding.
-See profile --> https://github.com/Eugene32
+- See profile --> https://github.com/Eugene32
 
