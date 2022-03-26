@@ -93,7 +93,7 @@ Here are common character classes:
 - `.`  --> Matches any character besides `\n` or new line.
 - `\d` --> Matches numeric digit and is equivalent to [ 0-9 ] notation.
 - `\w` --> Matches alphanumeric characters cover uppercase and lowercase alphabets.  Thiis equivalent to [ a-zA-z0-9 ].
-- `\s' --> Matches a single space character, including tabs and line breaks.
+- `\s` --> Matches a single space character, including tabs and line breaks.
 
 Value can be put in 'inverse' by changing the notation to uppercase.  '\W' will only match special characters instead of alphanumerics.
 
@@ -101,9 +101,18 @@ Value can be put in 'inverse' by changing the notation to uppercase.  '\W' will 
 
 ### Flags
 
+Are optional parameters that alter the behaviour of the regex search
+
+-    g: matches the pattern multiple times in a given string.  This would be like a searchAll matches in excel.
+-    i: makes the regex case insensitive to whether the input is uppercase or lowercase.
+-    m: enables multi-line mode. Where ^ and $ match the start and end of the entire string. Without this, multi-line strings match the beginning and end of each line.
+-    u: enables support for unicode
+-    s: short for single line, it causes the . to also match new line characters
+
+
 ### Character Escapes
 
-Character escape uses a backslash ( \ ) to denote that special characters quantifiers such as + should be taken literally when it is expressed as ( \+ ).  In a regex of `[a-z\+]` it means that the plus sign is part of the acceptable character for the match.  It is different to the regex of `29+` where ` + ` acts as quantifier.
+Character escape uses a backslash ( \ ) to denote that special characters such as quantifiers to be taken literally when it is expressed as ( \+ ).  In a regex of `[a-z\+]` it means that the plus sign is part of the acceptable character for the match.  It is different to the regex of `29+` where ` + ` acts as quantifier.
 
 ## Author
 
