@@ -39,21 +39,21 @@ Quantifiers as what the terms suggested will be you requirement for the number o
 
 Quantifiers can choose wilcards to specify the number of characters.
 
--   '*' -- is a univeral wildcard that accepts any character and any number of inputs. A zero input is acceptable the the asterisk. '*' wildcard.
+-   ' * ' -- is a univeral wildcard that accepts any character and any number of inputs. A zero input is acceptable the the asterisk. '*' wildcard.
         -   *com basically matches basic.com, abbasiccom, abscom, acom or com but does not match bacis.cmm.
--   '+'  -- is a wildcard that validates or matches a patter for one or more times.
+-   ' + '  -- is a wildcard that validates or matches a patter for one or more times.
         -   +com as with *com will match 'basiccom', 'abbasiccom', 'abscom' but rejects 'com', as as least 1 character must be there before the .com string.
--   '?' -- is a wildcard that will accept a pattern for one or no character.
+-   ' ? ' -- is a wildcard that will accept a pattern for one or no character.
         -   ?com will match 'com' and 'acom', 'bcom', 'ccom' or '5com'.  It rejects 4acom due to the extra character '4'.
--   '.' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
+-   ' . ' -- is a wildcard for match of everthing for any single that similarly works as the '?' metacharacter.
         -   To specifically match a period or a '.' character, you have to place a '\' before the '.' character.  This mean a '.' of the input can be evaluated or match by the \\. only.  The is why in our email regex we have a \\. notation in between '/^([a-z0-9_\.-]+)@([\da-z\.-]+)' and '([a-z\.]{2,6})$/' expression.  This is where we have the period in a fake@fakemail **.** com is.
 
 Using the curly brackets as a quantifier provides a better way of limit or dictating the match requirement.
 
 -   { i } - sets the match to be an exact number of times.
-        -   {4} means that it will only match if there are 4 characters in the input or string.
--   { i, }   - setting the minimum number of characters as a match.
-        -   {8} means that it will only match if the input has at least 8 characters.
+        -   { 4 } means that it will only match if there are 4 characters in the input or string.
+-   { i , }   - setting the minimum number of characters as a match.
+        -   { 8 } means that it will only match if the input has at least 8 characters.
 -   { i, n }  - the pattern must be a minimum character as i and a maximum of n characters.
         -   { 4 , 7 } means that a match will only happen when the evaluated string will have at least 4 characters and a maximum of seven characters.  Anything beyond the scope will not result to a match.
     
