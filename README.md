@@ -124,9 +124,9 @@ Now to decode our regex, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.
 - `/^` --> Serves as the start of the regex literal
 - `([a-z0-9_\.-]+)`  --> The first group. Indicates that this is a group to be evaluated where an alphanumeric `[ a-z0-9 ]` input is considered a match and that and underscore, `[ _ ]`, a period, `[ . ]` and a hyphen, `[ - ]` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's username.
 - `@` --> Indicates that the input must have an At sign between the first and the 2nd group.
-- `([\da-z\.-]+)` --> The second group.  Indicates that this group can contain numerical digits, `\d`, letters in lower case, 'a-z', a period, `.` and a hyphen, `-` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's server name.
+- `([\da-z\.-]+)` --> The second group.  Indicates that this group can contain numerical digits, `[ \d ]`, letters in lower case, `[ a-z ]`, a period, `[ . ]` and a hyphen, `[ - ]` is acceptable, and that it should at least contain a single character (due to the `+`) for the email's server name.
 - `\.` --> Indicates that the input must have a period in between the second and third grouping.
-- `([a-z\.]{2,6})`  --> The third group.  Indicates that it will be a match if the input is composed of lowercase letters, a period, `.` is a match, no number is acceptable and that is must be a minimum of 2 and a maximum of 6 characters as indicated in `{ 2 , 6 }`.
+- `([a-z\.]{2,6})`  --> The third group.  Indicates that it will be a match if the input is composed of lowercase letters, a period, `[ . ]` is a match, no number is acceptable and that is must be a minimum of 2 and a maximum of 6 characters as indicated in `{ 2 , 6 }`.
 - `$/`  --> End of regex literal.
 
 ## Author
