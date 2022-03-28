@@ -7,7 +7,7 @@ Regular expressions are specially formatted text strings to find patterns in tex
 ## Summary
 
 This tutorial will tackle and explain how to make a regex to validate an input to be an email.
-To validate then input we will have the regex as shown below:       
+To validate the input we will have the regex as shown below:       
 
                /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
@@ -28,7 +28,7 @@ To validate then input we will have the regex as shown below:
 ### Anchors
 Anchors are part of the regex that do not match any character that we intend to search or validate.  They are considered as indicator for a start and end and is represented by the ^ and $.
 
-The ^ anchor indicates to match a string after the anchor.  This means applying ^r will match 'r' for a string of 'reg'.  ^reg will match 're' of the string 'reg' and that ^reg will match 'reg' of the whole string of 'reg'. The ^ anchor negates the search criteria inside the square brackets.
+The ^ anchor indicates to match a string after the anchor.  This means applying ^r will match 'r' for a string of 'reg'.  ^reg will match 're' of the string 'reg' and that ^reg will match 'reg' of the whole string of 'reg'. 
 
 The $ anchor serves as a terminator or end of the regex search or validation.  This means x$ macthes 'x' for a string/input of 'ex'. In turn, e$ does not match for the same string but ex$ will match the whole string of 'ex'.
 
@@ -66,9 +66,9 @@ In our email regex, we have the { 2 , 6 } quantifier that sets the condition of 
 
 ### Grouping Constructs
 
-Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open and close parenthesis, ( ).
+Grouping constructs allows evaluation of the regex as a group or segments instead of the entire entry.  A group is identfited by a pair of open and close parenthesis, ( ).  See example below.
 
-          /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+          ([a-z0-9_\.-]+)
           
 The email regex has three groups which represents the part of the email namely: username, `([a-z0-9_\.-]+)`, email server `([\da-z\.-]+)` and the domain, `([a-z\.]{2,6})`.  For an email address of fake@fakemail.com, the user name is 'fake', 'fakemail' is the server and the domain is '.com'.
 
